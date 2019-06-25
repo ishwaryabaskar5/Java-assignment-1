@@ -1,9 +1,11 @@
+package com.stackroute.pe1;
+
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 	//	main method
-	public static void main(String[] args) throws IOException,ArrayIndexOutOfBoundsException {
+	public static void main(String[] args) {
 		
 		int option;
 		
@@ -15,16 +17,21 @@ public class Main {
 		SumOfArray sumOfArray = new SumOfArray();
 		CharacterIdentification characterIdentification = new CharacterIdentification();
 		Sorting sorting = new Sorting();
+		GuessNumber guessNumber = new GuessNumber();
+		StringReverse stringReverse = new StringReverse();
+		RepeatCharacters repeatCharacters = new RepeatCharacters();
 		
+//		Print the options
 		System.out.println("Enter the option");
 		System.out.println("1.Palindrome\t2.TomJerry\t3.VowelConstant");
 		System.out.println("4.NumberSeries\t5.SumOfArray\t6.CharacterIdentification");
-		System.out.println("7.Sorting\t");
+		System.out.println("7.Sorting\t8.GuessNumber\t9.StringReverse\t10.RepeatSubstring");
 		
 //		Read option
 		Scanner sc = new Scanner(System.in);
 		option = sc.nextInt();
 		
+//		Select corresponding method
 		switch (option) {
 			case 1:
 				palindrome.checkPalindrome();
@@ -46,6 +53,15 @@ public class Main {
 				break;
 			case 7:
 				sorting.sort();
+				break;
+			case 8:
+				guessNumber.guessNumber();
+				break;
+			case 9:
+				stringReverse.reverseString();
+				break;
+			case 10:
+				repeatCharacters.repeatSubString();
 				break;
 			default:
 				System.out.println(("Not a valid option"));

@@ -1,9 +1,12 @@
+package com.stackroute.pe1;
+
 import java.io.IOException;
 import java.util.Scanner;
 
-//Palindrome Class
+//com.stackroute.pe1.Palindrome Class
 public class Palindrome {
-	
+
+//	Check whether the entered number is palindrome or not.
 	public  void checkPalindrome() {
 	
 //		variable declaration and initialization
@@ -15,6 +18,8 @@ public class Palindrome {
 		num = sc.nextInt();
 		
 		temp = num;
+		
+//		Reverse a number and add even numbers in the number
 		while (temp != 0) {
 			rem = temp % 10;
 			rev = rev * 10 + rem;
